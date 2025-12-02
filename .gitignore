@@ -1,0 +1,41 @@
+# Gradle
+.gradle/
+**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# macOS
+.DS_Store
+
+# Node.js (for JS target)
+**/node_modules/
+npm-debug.log*
+
+# Kotlin/JS
+kotlin-js-store/
+
+# Kotlin metadata and sessions
+.kotlin/
+
+# Xcode (for iOS target)
+*.xcworkspace
+*.xcuserdata
+DerivedData/
+
+# Build outputs and caches
+build/
+**/build/
+composeApp/build/
+iosApp/build/

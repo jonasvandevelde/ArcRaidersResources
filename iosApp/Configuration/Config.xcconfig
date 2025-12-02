@@ -1,0 +1,7 @@
+TEAM_ID=
+
+PRODUCT_NAME=arcraidersresources
+PRODUCT_BUNDLE_IDENTIFIER=jonas.free.arcraidersresources.arcraidersresources$(TEAM_ID)
+
+CURRENT_PROJECT_VERSION=1
+MARKETING_VERSION=1.0
