@@ -1,7 +1,7 @@
 package jonas.free.arcraidersresources.data
 
-import org.jetbrains.compose.resources.DrawableResource
 import arcraidersresources.composeapp.generated.resources.Res
+import org.jetbrains.compose.resources.DrawableResource
 import arcraidersresources.composeapp.generated.resources.*
 
 enum class LootType { QUEST, PROJECT, RECYCLE, UPGRADE }
@@ -168,7 +168,7 @@ val lootItems = listOf(
         "Electrical Components", listOf(
             LootTypeRequirements(LootType.PROJECT, 30),
             LootTypeRequirements(LootType.UPGRADE, 5)
-        ), recyclePercentage = -48, imageResource = Res.drawable.electrical_components
+        ), recyclePercentage = -48, imageResource = Res.drawable.electrical_components, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Rubber Parts",
@@ -181,86 +181,125 @@ val lootItems = listOf(
         imageResource = Res.drawable.metal_parts
     ),
     LootItem(
-        "Advanced Electrical Components", listOf(
+        "Advanced Electrical Components",
+        listOf(
             LootTypeRequirements(LootType.PROJECT, 5),
             LootTypeRequirements(LootType.UPGRADE, 5)
-        ), recyclePercentage = -52, imageResource = Res.drawable.advanced_electrical_components
+        ),
+        recyclePercentage = -52,
+        imageResource = Res.drawable.advanced_electrical_components,
+        rarity = LootRarity.RARE
     ),
     LootItem(
         "Steel Spring",
         listOf(LootTypeRequirements(LootType.PROJECT, 15)),
         recyclePercentage = -25,
-        imageResource = Res.drawable.steel_spring
+        imageResource = Res.drawable.steel_spring, rarity = LootRarity.UNCOMMON
     ),
 
     //Recycle Items
-    LootItem("Ion Sputter", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.ion_sputter),
-    LootItem("Alarm Clock", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.alarm_clock),
-    LootItem("ARC Coolant", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.arc_coolant),
+    LootItem(
+        "Ion Sputter",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.ion_sputter,
+        rarity = LootRarity.EPIC
+    ),
+    LootItem(
+        "Alarm Clock",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.alarm_clock,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "ARC Coolant",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.arc_coolant,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "ARC Flex Rubber",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.arc_flex_rubber
+        imageResource = Res.drawable.arc_flex_rubber, rarity = LootRarity.RARE
     ),
     LootItem(
         "ARC Performance Steel",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.arc_performance_steel
+        imageResource = Res.drawable.arc_performance_steel, rarity = LootRarity.RARE
     ),
     LootItem(
         "ARC Synthetic Resin",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.arc_synthetic_resin
+        imageResource = Res.drawable.arc_synthetic_resin, rarity = LootRarity.RARE
     ),
     LootItem(
         "ARC Thermo Lining",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.arc_thermo_lining
+        imageResource = Res.drawable.arc_thermo_lining, rarity = LootRarity.RARE
     ),
-    LootItem("Bicycle Pump", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.bicycle_pump),
+    LootItem(
+        "Bicycle Pump",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.bicycle_pump,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Broken Flashlight",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.broken_flashlight
+        imageResource = Res.drawable.broken_flashlight, rarity = LootRarity.RARE
     ),
     LootItem(
         "Broken Guidance System",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.broken_guidance_system
+        imageResource = Res.drawable.broken_guidance_system, rarity = LootRarity.RARE
     ),
     LootItem(
         "Broken Handheld Radio",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.broken_handheld_radio
+        imageResource = Res.drawable.broken_handheld_radio, rarity = LootRarity.RARE
     ),
     LootItem(
         "Broken Handcuffs",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_handcuffs
+        imageResource = Res.drawable.ruined_handcuffs, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Broken Taser", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.broken_taser),
+    LootItem(
+        "Broken Taser",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.broken_taser,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Burned ARC Circuitry",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.broken_arc_circuitry
+        imageResource = Res.drawable.broken_arc_circuitry, rarity = LootRarity.UNCOMMON
     ),
     LootItem("Camera Lens", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.camera_lens),
     LootItem(
         "Candle Holder",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.candle_holder
+        imageResource = Res.drawable.candle_holder, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Coolant", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.coolant),
-    LootItem("Cooling Coil", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.cooling_coil),
+    LootItem(
+        "Coolant",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.coolant,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Cooling Coil",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.cooling_coil,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Crumpled Plastic Bottle",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.crumpled_plastic_bottle
+        imageResource = Res.drawable.crumpled_plastic_bottle, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Damaged ARC Motion Core",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.damaged_arc_motion_core
+        imageResource = Res.drawable.damaged_arc_motion_core, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Damaged ARC Powercell",
@@ -280,333 +319,414 @@ val lootItems = listOf(
     LootItem(
         "Degraded ARC Rubber",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.degraded_arc_rubber
+        imageResource = Res.drawable.degraded_arc_rubber, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Deflated Football",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.deflated_football
+        imageResource = Res.drawable.deflated_football, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Diving Goggles",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.diving_goggles
+        imageResource = Res.drawable.diving_goggles, rarity = LootRarity.RARE
     ),
     LootItem(
         "Dried-Out ARC Resin",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.dried_out_arc_resin
+        imageResource = Res.drawable.dried_out_arc_resin, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Expired Respirator",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.expired_respirator
+        imageResource = Res.drawable.expired_respirator, rarity = LootRarity.RARE
     ),
-    LootItem("Flame Spray", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.flame_spray),
-    LootItem("Frying Pan", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.frying_pan),
-    LootItem("Garlic Press", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.garlic_press),
-    LootItem("Headphones", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.headphones),
+    LootItem(
+        "Flame Spray",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.flame_spray,
+        rarity = LootRarity.UNCOMMON
+    ),
+    LootItem(
+        "Frying Pan",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.frying_pan,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Garlic Press",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.garlic_press,
+        rarity = LootRarity.UNCOMMON
+    ),
+    LootItem(
+        "Headphones",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.headphones,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Ice Cream Scooper",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ice_cream_scooper
+        imageResource = Res.drawable.ice_cream_scooper, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Impure ARC Coolant",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.impure_arc_coolant
+        imageResource = Res.drawable.impure_arc_coolant, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Industrial Charger",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.industrial_charger
+        imageResource = Res.drawable.industrial_charger, rarity = LootRarity.RARE
     ),
     LootItem(
         "Industrial Magnet",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.industrial_magnet
+        imageResource = Res.drawable.industrial_magnet, rarity = LootRarity.RARE
     ),
-    LootItem("Number Plate", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.number_plate),
+    LootItem(
+        "Number Plate",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.number_plate,
+        rarity = LootRarity.UNCOMMON
+    ),
     LootItem(
         "Household Cleaner",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.household_cleaner
+        imageResource = Res.drawable.household_cleaner, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Metal Brackets",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.metal_brackets
+        imageResource = Res.drawable.metal_brackets, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Polluted Air Filter",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.polluted_air_filter
+        imageResource = Res.drawable.polluted_air_filter, rarity = LootRarity.RARE
     ),
-    LootItem("Portable TV", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.portable_tv),
-    LootItem("Power Bank", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.power_bank),
-    LootItem("Projector", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.projector),
-    LootItem("Radio", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.radio),
-    LootItem("Radio Relay", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.radio_relay),
+    LootItem(
+        "Portable TV",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.portable_tv,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Power Bank",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.power_bank,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Projector",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.projector,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Radio",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.radio,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Radio Relay",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.radio_relay,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Remote Control",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.remote_control
+        imageResource = Res.drawable.remote_control, rarity = LootRarity.RARE
     ),
     LootItem(
         "Ripped Safety Vest",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ripped_safety_vest
+        imageResource = Res.drawable.ripped_safety_vest, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Rubber Pad", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.rubber_pad),
-    LootItem("Rope", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.rope),
+    LootItem(
+        "Rubber Pad",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.rubber_pad,
+        rarity = LootRarity.RARE
+    ),
+    LootItem(
+        "Rope",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.rope,
+        rarity = LootRarity.RARE
+    ),
     LootItem(
         "Ruined Accordion",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_accordion
+        imageResource = Res.drawable.ruined_accordion, rarity = LootRarity.RARE
     ),
-    LootItem("Ruined Baton", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.ruined_baton),
+    LootItem(
+        "Ruined Baton",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.ruined_baton,
+        rarity = LootRarity.UNCOMMON
+    ),
     LootItem(
         "Ruined Handcuffs",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_handcuffs
+        imageResource = Res.drawable.ruined_handcuffs, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Ruined Parachute",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_parachute
+        imageResource = Res.drawable.ruined_parachute, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Ruined Riot Shield",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_riot_shield
+        imageResource = Res.drawable.ruined_riot_shield, rarity = LootRarity.RARE
     ),
     LootItem(
         "Ruined Tactical Vest",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.ruined_tactical_vest
+        imageResource = Res.drawable.ruined_tactical_vest, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Rusty ARC Steel",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.rust_arc_steel
+        imageResource = Res.drawable.rust_arc_steel, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Rusted Bolts", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.rusted_bolts),
+    LootItem(
+        "Rusted Bolts",
+        listOf(LootTypeRequirements(LootType.RECYCLE)),
+        imageResource = Res.drawable.rusted_bolts,
+        rarity = LootRarity.UNCOMMON
+    ),
     LootItem(
         "Unusable Weapon",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.unusable_weapon
+        imageResource = Res.drawable.unusable_weapon,
+        rarity = LootRarity.RARE
     ),
     LootItem(
         "Spotter Relay",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.spotter_relay
+        imageResource = Res.drawable.spotter_relay,
+        rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Sample Cleaner",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.sample_cleaner
+        imageResource = Res.drawable.sample_cleaner,
+        rarity = LootRarity.RARE
     ),
     LootItem(
         "Spring Cushion",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.spring_cushion
+        imageResource = Res.drawable.spring_cushion,
+        rarity = LootRarity.RARE
     ),
     LootItem(
         "Tattered ARC Lining",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.tattered_arc_lining
+        imageResource = Res.drawable.tattered_arc_lining,
+        rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Tattered Clothes",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.tattered_clothes
+        imageResource = Res.drawable.tattered_clothes,
+        rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Thermostat", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.thermostat),
-    LootItem("Moss", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.moss),
-    LootItem("Torn Blanket", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.torn_blanket),
-    LootItem("Turbo Pump", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.turbo_pump),
-    LootItem("Zipline", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.zipline),
+    LootItem("Thermostat", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.thermostat,
+        rarity = LootRarity.RARE),
+    LootItem("Moss", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.moss,
+        rarity = LootRarity.RARE),
+    LootItem("Torn Blanket", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.torn_blanket,
+        rarity = LootRarity.RARE),
+    LootItem("Turbo Pump", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.turbo_pump,
+        rarity = LootRarity.RARE),
+    LootItem("Zipline", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.zipline,
+        rarity = LootRarity.RARE),
     LootItem(
         "Barricade Kit",
         listOf(LootTypeRequirements(LootType.RECYCLE)),
-        imageResource = Res.drawable.barricade_kit
+        imageResource = Res.drawable.barricade_kit, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Water Filter", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.water_filter),
+    LootItem("Water Filter", listOf(LootTypeRequirements(LootType.RECYCLE)), imageResource = Res.drawable.water_filter, rarity = LootRarity.RARE),
 
     //Upgrade Items
     LootItem(
         "Dog Collar",
         recyclePercentage = -26,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 1)), imageResource = Res.drawable.dog_collar
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 1)), imageResource = Res.drawable.dog_collar, rarity = LootRarity.RARE
     ),
     LootItem(
         "Lemon",
         recyclePercentage = -25,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.lemon
+        imageResource = Res.drawable.lemon, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Apricot",
         recyclePercentage = -53,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)),
-        imageResource = Res.drawable.apricot
+        imageResource = Res.drawable.apricot, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Prickly Pear",
         recyclePercentage = -53,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)), imageResource = Res.drawable.prickly_pear
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)), imageResource = Res.drawable.prickly_pear, rarity = LootRarity.COMMON
     ),
     LootItem(
         "Olives",
         recyclePercentage = -69,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)),
-        imageResource = Res.drawable.olives
+        imageResource = Res.drawable.olives, rarity = LootRarity.UNCOMMON
     ),
-    LootItem("Cat Bed", listOf(LootTypeRequirements(LootType.UPGRADE, 1)), imageResource = Res.drawable.cat_bed),
-    LootItem("Mushroom", listOf(LootTypeRequirements(LootType.UPGRADE, 12)), imageResource = Res.drawable.mushroom),
+    LootItem("Cat Bed", listOf(LootTypeRequirements(LootType.UPGRADE, 1)), imageResource = Res.drawable.cat_bed, rarity = LootRarity.UNCOMMON),
+    LootItem("Mushroom", listOf(LootTypeRequirements(LootType.UPGRADE, 12)), imageResource = Res.drawable.mushroom, rarity = LootRarity.UNCOMMON),
     LootItem(
         "Very Comfortable Pillow",
         recyclePercentage = 0,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.very_comfortable_pillow
+        imageResource = Res.drawable.very_comfortable_pillow, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Rusted Tools",
         recyclePercentage = -10,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, amountNeeded = 3)),
-        imageResource = Res.drawable.rusted_tools
+        imageResource = Res.drawable.rusted_tools, rarity = LootRarity.RARE
     ),
     LootItem(
         "Mechanical Components",
         listOf(LootTypeRequirements(LootType.UPGRADE, amountNeeded = 5)),
-        recyclePercentage = -49, imageResource = Res.drawable.mechanical_components
+        recyclePercentage = -49, imageResource = Res.drawable.mechanical_components, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Rusted Gear",
         recyclePercentage = -21,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)), imageResource = Res.drawable.rusted_gear
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)), imageResource = Res.drawable.rusted_gear, rarity = LootRarity.RARE
     ),
     LootItem(
         "Advanced Mechanical Components",
         recyclePercentage = -21,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.advanced_mechanical_components
+        imageResource = Res.drawable.advanced_mechanical_components, rarity = LootRarity.RARE
     ),
     LootItem(
         "Sentinel Firing Core",
         recyclePercentage = -23,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 4)),
-        imageResource = Res.drawable.sentinel_firing_core
+        imageResource = Res.drawable.sentinel_firing_core, rarity = LootRarity.RARE
     ),
     LootItem(
         "Power Cable",
         recyclePercentage = -20,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)), imageResource = Res.drawable.power_cable
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)), imageResource = Res.drawable.power_cable, rarity = LootRarity.RARE
     ),
     LootItem(
         "Industrial Battery",
         recyclePercentage = -15,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.industrial_battery
+        imageResource = Res.drawable.industrial_battery, rarity = LootRarity.RARE
     ),
     LootItem(
         "Bastion Cell",
         recyclePercentage = -22,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)), imageResource = Res.drawable.bastion_cell
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)), imageResource = Res.drawable.bastion_cell, rarity = LootRarity.EPIC
     ),
     LootItem(
         "Cracked Bioscanner",
         recyclePercentage = -10,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 2)),
-        imageResource = Res.drawable.cracked_bioscanner
+        imageResource = Res.drawable.cracked_bioscanner, rarity = LootRarity.RARE
     ),
     LootItem(
         "Tick Pod",
         recyclePercentage = -22,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 8)),
-        imageResource = Res.drawable.tick_pod
+        imageResource = Res.drawable.tick_pod, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Rusted Shut Medical Kit",
         recyclePercentage = 0,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.rusted_shut_medical_kit
+        imageResource = Res.drawable.rusted_shut_medical_kit, rarity = LootRarity.RARE
     ),
     LootItem(
         "Toaster",
         recyclePercentage = -10,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.toaster
+        imageResource = Res.drawable.toaster, rarity = LootRarity.RARE
     ),
     LootItem(
         "Fireball Burner",
         recyclePercentage = -27,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 8)),
-        imageResource = Res.drawable.fireball_burner
+        imageResource = Res.drawable.fireball_burner, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "ARC Motion Core",
         recyclePercentage = -60,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 5)),
-        imageResource = Res.drawable.arc_motion_core
+        imageResource = Res.drawable.arc_motion_core, rarity = LootRarity.RARE
     ),
     LootItem(
         "Motor",
         recyclePercentage = -25,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.motor
+        imageResource = Res.drawable.motor, rarity = LootRarity.RARE
     ),
     LootItem(
         "ARC Circuitry",
         recyclePercentage = -25,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 10)),
-        imageResource = Res.drawable.arc_circuitry
+        imageResource = Res.drawable.arc_circuitry, rarity = LootRarity.RARE
     ),
     LootItem(
         "Bombardier Cell",
         recyclePercentage = -25,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 6)),
-        imageResource = Res.drawable.bombardier_cell
+        imageResource = Res.drawable.bombardier_cell, rarity = LootRarity.EPIC
     ),
     LootItem(
         "Synthesized Fuel",
         recyclePercentage = -50,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.synthesized_fuel
+        imageResource = Res.drawable.synthesized_fuel, rarity = LootRarity.RARE
     ),
     LootItem(
         "Pop Trigger",
         recyclePercentage = -27,
-        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 5)), imageResource = Res.drawable.pop_trigger
+        typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 5)), imageResource = Res.drawable.pop_trigger, rarity = LootRarity.COMMON
     ),
     LootItem(
         "Crude Explosives",
         recyclePercentage = -44,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 5)),
-        imageResource = Res.drawable.crude_explosives
+        imageResource = Res.drawable.crude_explosives, rarity = LootRarity.UNCOMMON
     ),
     LootItem(
         "Laboratory Reagents",
         recyclePercentage = -20,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.laboratory_reagents
+        imageResource = Res.drawable.laboratory_reagents, rarity = LootRarity.RARE
     ),
     LootItem(
         "Explosive Compound",
         recyclePercentage = -46,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 5)),
-        imageResource = Res.drawable.explosive_compound
+        imageResource = Res.drawable.explosive_compound, rarity = LootRarity.RARE
     ),
     LootItem(
         "Damaged Heat Sink",
         recyclePercentage = -15,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 2)),
-        imageResource = Res.drawable.damaged_heat_sink
+        imageResource = Res.drawable.damaged_heat_sink, rarity = LootRarity.RARE
     ),
     LootItem(
         "Fried Motherboard",
         recyclePercentage = -21,
         typeRequirements = listOf(LootTypeRequirements(LootType.UPGRADE, 3)),
-        imageResource = Res.drawable.fried_motherboard
+        imageResource = Res.drawable.fried_motherboard, rarity = LootRarity.RARE
     ),
 )
